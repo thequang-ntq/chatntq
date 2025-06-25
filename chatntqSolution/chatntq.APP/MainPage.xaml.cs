@@ -2,23 +2,19 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        protected override async void OnAppearing()
         {
-            count++;
+            base.OnAppearing();
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            await Task.Delay(1500);
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            if(Application.Current?.Windows.FirstOrDefault() != null)
+                Application.Current.Windows[0].Page = new NavigationPage(new UI.Login.LoginPage());
         }
     }
 

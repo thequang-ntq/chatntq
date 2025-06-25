@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="chatntq.APP.Components.Label.LabelComp">
+    <Label
+        x:Name="LabelComponent"
+        Text="{Binding Text, Source={RelativeSource AncestorType={x:Type local:LabelComp}}}"
+        Padding="{Binding Padding, Source={RelativeSource AncestorType={x:Type local:LabelComp}}}"
+        TextColor="Black"
+        FontSize="{Binding FontSize, Source={RelativeSource AncestorType={x:Type local:LabelComp}}}"
+        FontFamily="{Binding FontFamily, Source={RelativeSource AncestorType={x:Type local:LabelComp}}}"
+        FontAttributes="{Binding FontAttributes, Source={RelativeSource AncestorType={x:Type local:LabelComp}}}"
+        VerticalOptions="{Binding VerticalOptions, Source={RelativeSource AncestorType={x:Type local:ImageButtonComp}}}"
+        HorizontalOptions="{Binding HorizontalOptions, Source={RelativeSource AncestorType={x:Type local:ImamgeButtonComp}}}" 
+    />
+</ContentView>

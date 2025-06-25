@@ -77,10 +77,17 @@
 
 ## Time Tracking
 
-| Date         | Task                | Notes                                               |
-|--------------|---------------------|-----------------------------------------------------|
-| 09/05/2025     | Setup project     |                                                     |
-
+| Date              | Task                        | Notes                                               |
+|-------------------|-----------------------------|-----------------------------------------------------|
+| 09/05/2025        | Setup project               |                                                     |
+| 10/05-10/06/2025  | Pause Project               | Temporary pause project to learn on school          |
+| 11/06-19/06/2025  | Learning .Net Maui          | Learning .Net Maui, .Net 9.0 (FE)                   |
+| 20/06/2025        | Login UI                    | FE, 1.0 beta                                        |
+| 21/06/2025        | Register UI, ForgetPass UI  | FE, 1.0 beta                                        |
+| 22/06/2025        | Main UI                     | FE, 1.0 beta                                        |
+| 23/06/2025        | Setting UI                  | FE, 1.0 beta                                        |
+| 24/06/2025        | ChangePass UI               | FE, 1.0 beta                                        |
+| 25/06/2025        | Reusable Component          | FE                                                  |                                   
 ##### Future Work
 - [ ] Update app structure, optimize and clean code.
 - [ ] UI : Design the UI better, cleaner

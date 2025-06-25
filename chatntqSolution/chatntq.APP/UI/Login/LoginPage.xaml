@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="chatntq.APP.UI.Login.LoginPage"
+             NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="#5BD6AD">
+            <Border 
+                x:Name="Border_Login"
+                Stroke="Black"
+                BackgroundColor="LightYellow"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 10,10,10,10"
+                Padding="10"
+                Margin="10">
+                <VerticalStackLayout>
+                    <Label 
+                        Text="Thông tin đăng nhập"
+                        TextColor="Black"
+                        FontFamily="Pacifico-Regular.ttf"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" 
+                    />
+                    <Label 
+                        Text="Tài khoản"
+                        TextColor="Black"
+                        FontFamily="Pacifico-Regular.ttf"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Start"    
+                    />
+                    <Border 
+                        x:Name="Border_Account"
+                        Stroke="Black" 
+                        StrokeThickness="2"
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                        <Entry
+                            x:Name="Account"
+                            TextColor="Black"
+                            MaxLength="255"
+                            Keyboard="Default"
+                            ReturnType="Next"
+                            BackgroundColor="White"
+                            Placeholder="Nhập tên đăng nhập..."
+                            PlaceholderColor="Grey"
+                            Focused="Focused_Account"
+                            Unfocused="Unfocused_Account"
+                            ClearButtonVisibility="WhileEditing"
+                            Completed="Handle_Account"
+                        />
+                    </Border>
+                    <Label 
+                        Text="Mật khẩu"
+                        TextColor="Black"
+                        FontFamily="Pacifico-Regular.ttf"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Start"    
+                    />
+                    <Border 
+                        x:Name="Border_Password"
+                        Stroke="Black" 
+                        StrokeThickness="2"
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                        <Entry
+                            x:Name="Password"
+                            TextColor="Black"
+                            MaxLength="255"
+                            IsPassword="True"
+                            Keyboard="Default"
+                            ReturnType="Default"
+                            BackgroundColor="White"
+                            Placeholder="Nhập mật khẩu..."
+                            PlaceholderColor="Grey"
+                            Focused="Focused_Password"
+                            Unfocused="Unfocused_Password"
+                            ClearButtonVisibility="WhileEditing"
+                            Completed="Handle_Password"
+                        />
+                    </Border>
+                    <Button
+                        x:Name="Button_Login"
+                        BackgroundColor="AliceBlue"
+                        Text="Đăng nhập"
+                        TextColor="White"
+                        FontFamily="Pacifico-Regular.ttf"
+                        BorderColor="AliceBlue"
+                        CornerRadius="10"
+                        Padding="10"
+                        IsEnabled="True"
+                        IsVisible="True"
+                        Pressed="Pressed_Login"
+                        Released="Released_Login"
+                        Clicked="Handle_Login"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                    />
+                    <HorizontalStackLayout>
+                        <Label  
+                            Text="Ghi nhớ lần đăng nhập này"
+                            TextColor="Black"
+                            FontFamily="Pacifico-Regular.ttf"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Start"
+                        />
+                        <CheckBox   
+                            x:Name="Check_Login_Remember"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Start"
+                            IsChecked="False"
+                            IsEnabled="True"
+                            IsVisible="True"
+                            Color="AliceBlue"
+                            CheckedChanged="Handle_Check_Login_Remember">
+                        </CheckBox>
+                    </HorizontalStackLayout>
+                    <Button
+                        x:Name="Button_Register"
+                        BackgroundColor="Orange"
+                        Text="Đăng ký"
+                        TextColor="White"
+                        FontFamily="Pacifico-Regular.ttf"
+                        BorderColor="Orange"
+                        CornerRadius="10"
+                        Padding="10"
+                        IsEnabled="True"
+                        IsVisible="True"
+                        Pressed="Pressed_Register"
+                        Released="Released_Register"
+                        Clicked="Handle_Register"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End">
+                    </Button>
+                    <Button
+                        x:Name="Button_Forget_Password"
+                        BackgroundColor="Purple"
+                        Text="Đăng ký"
+                        TextColor="White"
+                        FontFamily="Pacifico-Regular.ttf"
+                        BorderColor="Purple"
+                        CornerRadius="10"
+                        Padding="10"
+                        IsEnabled="True"
+                        IsVisible="True"
+                        Pressed="Pressed_Forget_Password"
+                        Released="Released_Forget_Password"
+                        Clicked="Handle_Forget_Password"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End">
+                    </Button>
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

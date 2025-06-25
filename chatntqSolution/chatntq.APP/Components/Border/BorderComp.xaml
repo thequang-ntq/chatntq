@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="chatntq.APP.Components.Border.BorderComp">
+    <Border
+        x:Name="BorderComponent"
+        Stroke="{Binding Stroke, Source={RelativeSource AncestorType={x:Type local:BorderComp}}}"
+        BackgroundColor="{Binding BackgroundColor, Source={RelativeSource AncestorType={x:Type local:BorderComp}}}"
+        StrokeThickness="2"
+        StrokeShape="RoundRectangle 10,10,10,10"
+        Padding="{Binding Padding, Source={RelativeSource AncestorType={x:Type local:BorderComp}}}"
+        Margin="{Binding Padding, Source={RelativeSource AncestorType={x:Type local:BorderComp}}}"
+    />
+</ContentView>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="chatntq.APP.UI.Register.RegisterPage">
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="#5BD6AD">
+            <Border 
+                x:Name="Border_Register"
+                Stroke="Black"
+                BackgroundColor="LightYellow"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 10,10,10,10"
+                Padding="10"
+                Margin="10">
+                <VerticalStackLayout>
+                    <Label 
+                        Text="Thông tin đăng ký"
+                        TextColor="Black"
+                        FontFamily="Pacifico-Regular.ttf"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center" 
+                    />
+                    <Label 
+                        Text="Tài khoản"
+                        TextColor="Black"
+                        FontFamily="Pacifico-Regular.ttf"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Start"    
+                    />
+                    <Border 
+                        x:Name="Border_Account"
+                        Stroke="Black" 
+                        StrokeThickness="2"
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                        <Entry
+                            x:Name="Account"
+                            TextColor="Black"
+                            MaxLength="255"
+                            Keyboard="Default"
+                            ReturnType="Next"
+                            BackgroundColor="White"
+                            Placeholder="Nhập tên đăng ký..."
+                            PlaceholderColor="Grey"
+                            Focused="Focused_Account"
+                            Unfocused="Unfocused_Account"
+                            ClearButtonVisibility="WhileEditing"
+                            Completed="Handle_Account"
+                        />
+                    </Border>
+                    <Label 
+                        Text="Tên hiển thị"
+                        TextColor="Black"
+                        FontFamily="Pacifico-Regular.ttf"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Start"    
+                    />
+                    <Border 
+                        x:Name="Border_Name"
+                        Stroke="Black" 
+                        StrokeThickness="2"
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                        <Entry
+                            x:Name="Name"
+                            TextColor="Black"
+                            MaxLength="255"
+                            Keyboard="Default"
+                            ReturnType="Next"
+                            BackgroundColor="White"
+                            Placeholder="Nhập tên hiển thị khi chat..."
+                            PlaceholderColor="Grey"
+                            Focused="Focused_Name"
+                            Unfocused="Unfocused_Name"
+                            ClearButtonVisibility="WhileEditing"
+                            Completed="Handle_Name"
+                        />
+                    </Border>
+                    <Label 
+                        Text="Mật khẩu"
+                        TextColor="Black"
+                        FontFamily="Pacifico-Regular.ttf"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Start"    
+                    />
+                    <Border 
+                        x:Name="Border_Password"
+                        Stroke="Black" 
+                        StrokeThickness="2"
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                        <Entry
+                            x:Name="Password"
+                            TextColor="Black"
+                            MaxLength="255"
+                            IsPassword="True"
+                            Keyboard="Default"
+                            ReturnType="Default"
+                            BackgroundColor="White"
+                            Placeholder="Nhập mật khẩu..."
+                            PlaceholderColor="Grey"
+                            Focused="Focused_Password"
+                            Unfocused="Unfocused_Password"
+                            ClearButtonVisibility="WhileEditing"
+                            Completed="Handle_Password"
+                        />
+                    </Border>
+                    <Button
+                        x:Name="Button_Register"
+                        BackgroundColor="AliceBlue"
+                        Text="Đăng ký"
+                        TextColor="White"
+                        FontFamily="Pacifico-Regular.ttf"
+                        BorderColor="AliceBlue"
+                        CornerRadius="10"
+                        Padding="10"
+                        IsEnabled="True"
+                        IsVisible="True"
+                        Pressed="Pressed_Register"
+                        Released="Released_Register"
+                        Clicked="Handle_Register"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                    />
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

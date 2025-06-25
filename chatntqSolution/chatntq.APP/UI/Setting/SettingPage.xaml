@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="chatntq.APP.UI.Setting.SettingPage">
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="#5BD6AD">
+            <Label 
+                Text="Cài đặt"
+                Padding="10"
+                TextColor="Black"
+                FontSize="Large"
+                FontFamily="Pacifico-Regular.ttf"
+                FontAttributes="Bold"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"  
+            />
+            <Border
+                x:Name="Border_Person"
+                Stroke="White"
+                StrokeThickness="2"
+                BackgroundColor="White"
+                StrokeShape="RoundRectangle 10,10,10,10">
+                <ScrollView>
+                    <VerticalStackLayout>
+                        <Image
+                            Source="dotnet_bot.png"
+                            SemanticProperties.Description="Ảnh đại diện"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                        />
+                        <Label
+                            Text="Tên hiển thị"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                        />
+                        <Label
+                            Text="Ngày tạo tài khoản: 20/06/2025"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                        />
+                        <Label
+                            Text="Số lượng bạn bè: 1"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                        />
+                        <HorizontalStackLayout>
+                            <Button
+                                x:Name="Button_Change_Image"
+                                BackgroundColor="AliceBlue"
+                                Text="Đổi ảnh đại diện"
+                                TextColor="White"
+                                FontFamily="Pacifico-Regular.ttf"
+                                BorderColor="AliceBlue"
+                                CornerRadius="10"
+                                Padding="10"
+                                IsEnabled="True"
+                                IsVisible="True"
+                                Pressed="Pressed_Change_Image"
+                                Released="Released_Change_Image"
+                                Clicked="Change_Image"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                            />
+                            <Button
+                                x:Name="Button_Change_Password"
+                                BackgroundColor="Orange"
+                                Text="Đổi mật khẩu"
+                                TextColor="White"
+                                FontFamily="Pacifico-Regular.ttf"
+                                BorderColor="Orange"
+                                CornerRadius="10"
+                                Padding="10"
+                                IsEnabled="True"
+                                IsVisible="True"
+                                Pressed="Pressed_Change_Password"
+                                Released="Released_Change_Password"
+                                Clicked="Change_Password"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                            />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <Button
+                                x:Name="Button_Delete_Account"
+                                BackgroundColor="Red"
+                                Text="Xóa tài khoản"
+                                TextColor="White"
+                                FontFamily="Pacifico-Regular.ttf"
+                                BorderColor="Red"
+                                CornerRadius="10"
+                                Padding="10"
+                                IsEnabled="True"
+                                IsVisible="True"
+                                Pressed="Pressed_Delete_Account"
+                                Released="Released_Delete_Account"
+                                Clicked="Delete_Account"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                            />
+                            <Button
+                                x:Name="Button_Logout"
+                                BackgroundColor="Purple"
+                                Text="Đăng xuất"
+                                TextColor="White"
+                                FontFamily="Pacifico-Regular.ttf"
+                                BorderColor="Purple"
+                                CornerRadius="10"
+                                Padding="10"
+                                IsEnabled="True"
+                                IsVisible="True"
+                                Pressed="Pressed_Logout"
+                                Released="Released_Logout"
+                                Clicked="Logout"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                            />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </ScrollView>
+                    
+            </Border>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>

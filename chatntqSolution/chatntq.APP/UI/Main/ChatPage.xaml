@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="chatntq.APP.UI.Main.ChatPage"
+             NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="#5BD6AD">
+            <Label 
+                Text="Nhắn tin"
+                Padding="10"
+                TextColor="Black"
+                FontSize="Large"
+                FontFamily="Pacifico-Regular.ttf"
+                FontAttributes="Bold"
+                VerticalOptions="Start" 
+                HorizontalOptions="Start" 
+            />
+            <ScrollView>
+                <HorizontalStackLayout>
+                    <Border
+                        x:Name="Border_Person"
+                        Stroke="White"
+                        StrokeThickness="2"
+                        BackgroundColor="White"
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                        <ScrollView>
+                            <VerticalStackLayout>
+                                <Label
+                                    Text="Tài khoản bạn bè"
+                                    TextColor="Black"
+                                    FontSize="Large"
+                                    VerticalOptions="Start"
+                                    HorizontalOptions="Start"
+                                />
+                                <Border>
+                                    <SearchBar 
+                                        x:Name="Search_Person"
+                                        Placeholder="Nhập tài khoản cần nhắn tin..."
+                                        PlaceholderColor="Grey"
+                                        TextColor="Black"
+                                        IsEnabled="True"
+                                        IsVisible="True"
+                                        SearchButtonPressed="Handle_Search_Person"
+                                    />
+                                </Border>
+                                <CollectionView>
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
+                                            <HorizontalStackLayout>
+                                                <Image
+                                                    Source="dotnet_bot.png"
+                                                    SemanticProperties.Description="Ảnh đại diện"
+                                                    VerticalOptions="Center"
+                                                    HorizontalOptions="Start"
+                                                />
+                                                <Label
+                                                    Text="Tên bạn bè"
+                                                    TextColor="Black"
+                                                    FontSize="Medium"
+                                                    VerticalOptions="Center"
+                                                    HorizontalOptions="Start"
+                                                />
+                                            </HorizontalStackLayout>
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+
+                            </VerticalStackLayout>
+                        </ScrollView>
+                    </Border>
+                    <Border>
+                        <ScrollView>
+                            <VerticalStackLayout>
+                                <HorizontalStackLayout>
+                                    <Image
+                                        Source="dotnet_bot.png"
+                                        SemanticProperties.Description="Ảnh đại diện"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Start"
+                                    />
+                                    <VerticalStackLayout>
+                                        <Label
+                                            Text="Tên bạn bè"
+                                            TextColor="Black"
+                                            FontSize="Medium"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Start"
+                                        />
+                                        <Label
+                                            Text="Đang hoạt động"
+                                            TextColor="Green"
+                                            FontSize="Medium"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Start"
+                                        />
+                                    </VerticalStackLayout>
+                                </HorizontalStackLayout>
+                                <Border BackgroundColor="Grey">
+                                    <ScrollView>
+                                        <VerticalStackLayout>
+                                            <CollectionView>
+                                                <CollectionView.ItemTemplate>
+                                                    <DataTemplate>
+
+                                                    </DataTemplate>
+                                                </CollectionView.ItemTemplate>
+                                            </CollectionView>
+                                            <HorizontalStackLayout>
+                                                <Border 
+                                                    x:Name="Border_Reply_Message"
+                                                    Stroke="White" 
+                                                    StrokeThickness="2"
+                                                    StrokeShape="RoundRectangle 10,10,10,10">
+                                                    <Entry
+                                                        x:Name="Reply_Message"
+                                                        TextColor="Black"
+                                                        MaxLength="255"
+                                                        Keyboard="Default"
+                                                        ReturnType="Next"
+                                                        BackgroundColor="White"
+                                                        Placeholder="Nhập tin nhắn..."
+                                                        PlaceholderColor="Grey"
+                                                        Focused="Focused_Reply_Message"
+                                                        Unfocused="Unfocused_Reply_Message"
+                                                        ClearButtonVisibility="WhileEditing"
+                                                        Completed="Handle_Reply_Message"  
+                                                    />
+                                                </Border>
+                                                <ImageButton
+                                                    Source="dotnet_bot.png"
+                                                    Clicked="Handle_Reply_Message"
+                                                    BackgroundColor="Transparent"
+                                                    VerticalOptions="Center"
+                                                    HorizontalOptions="Center"
+                                                />
+                                            </HorizontalStackLayout>
+
+                                        </VerticalStackLayout>
+                                    </ScrollView>
+
+                                </Border>
+                            </VerticalStackLayout>
+                        </ScrollView>
+                    </Border>
+                    <Border>
+                        <ScrollView>
+                            <VerticalStackLayout>
+                                <Image
+                                    Source="dotnet_bot.png"
+                                    SemanticProperties.Description="Ảnh đại diện"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                />
+                                <Label
+                                    Text="Tên bạn bè"
+                                    TextColor="Black"
+                                    FontSize="Medium"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                />
+                                <Border>
+                                    <SearchBar 
+                                        x:Name="Search_Message"
+                                        Placeholder="Nhập tin nhắn cần tìm..."
+                                        PlaceholderColor="Grey"
+                                        TextColor="Black"
+                                        IsEnabled="True"
+                                        IsVisible="True"
+                                        SearchButtonPressed="Handle_Search_Message"
+                                    />
+                                </Border>
+                                <Label
+                                    Text="Ngày kết bạn: 23/06/2025"
+                                    TextColor="Black"
+                                    FontSize="Medium"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                />
+                                <Label
+                                    Text="Số lượng tin nhắn: 10"
+                                    TextColor="Black"
+                                    FontSize="Medium"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                />
+                                <Label
+                                    Text="Ngày bắt đầu nhắn: 24/06/2025"
+                                    TextColor="Black"
+                                    FontSize="Medium"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                />
+                                <ImageButton
+                                    Source="dotnet_bot.png"
+                                    Clicked="Setting"
+                                    BackgroundColor="Transparent"
+                                    VerticalOptions="End"
+                                    HorizontalOptions="End"
+                                />
+                            </VerticalStackLayout>
+                        </ScrollView>
+                    </Border>
+                </HorizontalStackLayout>
+            </ScrollView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
